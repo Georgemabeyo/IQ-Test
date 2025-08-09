@@ -1,5 +1,5 @@
 <?php
-$host = 'dpg-d2bm45h5pdvud1234-mysql.oregon-postgres.render.com'; // External host
+$host = 'postgresql://iq_test_krgw_user:OgdTKE141PnrIgF8PPB1zhzAvK718bDi@dpg-d2bm45h5pdvs73ctek4g-a/iq_test_krgw'; // External host
 $port = 25060;
 $user = 'iq_test_krgw_user'; 
 $password = 'password_uliyopewa_na_render';
@@ -13,3 +13,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
+
