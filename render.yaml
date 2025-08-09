@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: iq-test-app
+    env: php
+    plan: free
+    region: oregon
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:10000 -t .
+    repo: https://github.com/Georgemabeyo/IQ-Test
