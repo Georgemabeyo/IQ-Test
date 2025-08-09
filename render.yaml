@@ -1,7 +1,7 @@
 services:
   - type: web
     name: iq-test-app
-    runtime: php:8.2
+    env: php
     plan: free
     region: oregon
     buildCommand: ""
