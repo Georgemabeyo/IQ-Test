@@ -1,14 +1,15 @@
 <?php
-$host = 'postgresql://iq_test_krgw_user:OgdTKE141PnrIgF8PPB1zhzAvK718bDi@dpg-d2bm45h5pdvs73ctek4g-a/iq_test_krgw'; // External host
-$port = 25060;
-$user = 'iq_test_krgw_user'; 
-$password = 'password_uliyopewa_na_render';
-$database = 'iq_test_krgw';
+// Soma details za database kutoka Environment Variables
+$host = getenv("MYSQL_HOST") ?: "dpg-d2bm45h5pdvud1234-mysql.oregon-postgres.render.com";
+$user = getenv("MYSQL_USER") ?: "iq_test_krgw_user";
+$password = getenv("MYSQL_PASSWORD") ?: "OgdTKE141PnrIgF8PPB1zhzAvK718bDi";
+$database = getenv("MYSQL_DATABASE") ?: "iq_test_krgw";
+$port = getenv("MYSQL_PORT") ?: 25060; // Port ya MySQL kwenye Render
 
-// Connection
+// Jaribu kuunganisha
 $conn = new mysqli($host, $user, $password, $database, $port);
 
-// Check connection
+// Angalia kama kuna error
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
