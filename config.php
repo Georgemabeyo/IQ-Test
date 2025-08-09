@@ -1,9 +1,10 @@
 <?php
 // Makubaliano ya XAMPP default
-$host = 'localhost';     // Local server
+$host = '127.0.0.1';     // Local server
 $user = 'root';          // Default XAMPP user
 $password = '';          // Default XAMPP password (hakuna password)
 $database = 'iq_test';   // Hakikisha umeunda hii database ndani ya phpMyAdmin
+
 
 // Unda connection
 $conn = new mysqli($host, $user, $password, $database);
@@ -13,3 +14,4 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 ?>
+
